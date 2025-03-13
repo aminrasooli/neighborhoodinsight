@@ -1,0 +1,39 @@
+.score-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: #e2e8f0;
+    overflow: hidden;
+}
+
+.score-bar-fill {
+    height: 100%;
+    background: #4299e1;
+    transition: width 0.5s ease-out;
+}
+
+#score-circle {
+    transition: stroke-dashoffset 1s ease-out;
+}
+
+.component-score {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.component-score:hover {
+    opacity: 0.9;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF Neighborhood Insights</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">San Francisco Neighborhood Insights</h1>
+            <p class="text-gray-600">Discover detailed insights about San Francisco neighborhoods</p>
+        </header>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="mb-6">
+                <input type="text" 
+                       id="address-input" 
+                       placeholder="Enter a San Francisco address (e.g., 123 Market St)" 
+                       class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <p class="text-sm text-gray-500 mt-2">Note: Currently available for San Francisco addresses only</p>
+            </div>
+            <button id="search-btn" 
+                    class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200">
+                Search
+            </button>
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="flex justify-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            </div>
+        </div>
+
+        <div id="results" class="hidden max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <!-- Overall Score -->
+                <div class="p-6 border-b">
+                    <h2 class="text-2xl font-bold mb-4" id="neighborhood-name">Neighborhood Score</h2>
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="relative w-48 h-48">
+                            <svg class="transform -rotate-90 w-48 h-48">
+                                <circle cx="96" cy="96" r="88" stroke="#edf2f7" stroke-width="12" fill="none"/>
+                                <circle id="score-circle" cx="96" cy="96" r="88" stroke="#4299e1" stroke-width="12" fill="none"
+                                    stroke-dasharray="553" stroke-dashoffset="553"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                                <span id="overall-score" class="text-4xl font-bold text-gray-800">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Component Scores -->
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4">Component Scores</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="component-scores">
+                        <!-- Component scores will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Detailed Information -->
+                <div class="p-6 bg-gray-50">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Safety & Crime</h3>
+                            <div id="crime-info" class="space-y-2">
+                                <!-- Crime info will be inserted here -->
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Real Estate</h3>
+                            <div id="real-estate-info" class="space-y-2">
+                                <!-- Real estate info will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Insights -->
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4">Community Insights</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium mb-2">Positive Aspects</h4>
+                            <ul id="positive-aspects" class="list-disc list-inside text-gray-600">
+                                <!-- Positive aspects will be inserted here -->
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">Areas for Improvement</h4>
+                            <ul id="complaints" class="list-disc list-inside text-gray-600">
+                                <!-- Complaints will be inserted here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
