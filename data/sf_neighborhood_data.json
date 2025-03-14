@@ -1,0 +1,788 @@
+{
+  "neighborhoods": [
+    {
+      "name": "Mission District",
+      "metrics": {
+        "safetyScore": 6.8,
+        "educationScore": 7.5,
+        "transitScore": 8.8,
+        "amenitiesScore": 9.0,
+        "walkScore": 96,
+        "bikeScore": 86,
+        "averagePrice": 1200000,
+        "pricePerSqFt": 1050,
+        "medianRent": 3200,
+        "yearOverYearPrice": 2.3,
+        "daysOnMarket": 28,
+        "crimeRate": {
+          "violent": 5.2,
+          "property": 42.1,
+          "total": 47.3
+        },
+        "schoolData": {
+          "publicSchools": 8,
+          "privateSchools": 4,
+          "averageRating": 7.5,
+          "studentTeacherRatio": 18
+        }
+      },
+      "demographics": {
+        "population": 45000,
+        "medianAge": 34,
+        "householdIncome": 112000,
+        "education": {
+          "highSchool": 92,
+          "bachelors": 68,
+          "graduate": 32
+        },
+        "housing": {
+          "ownedPercentage": 28,
+          "rentedPercentage": 72
+        }
+      },
+      "amenities": {
+        "restaurants": 245,
+        "bars": 68,
+        "cafes": 82,
+        "groceryStores": 15,
+        "parks": 8,
+        "gyms": 12,
+        "schools": 12,
+        "hospitals": 2,
+        "publicTransitStops": 18
+      },
+      "features": [
+        "Vibrant Latino Culture",
+        "Street Art Scene",
+        "Food Scene",
+        "Nightlife",
+        "Public Transportation",
+        "Historic Architecture",
+        "Cultural Events",
+        "Tech Startups"
+      ],
+      "reviews": [
+        {
+          "id": "m1",
+          "author": "Sarah M.",
+          "rating": 4.5,
+          "date": "2024-02-15",
+          "content": "The Mission's food scene is unbeatable. From traditional taquerias to trendy fusion restaurants, you'll never run out of options. The murals add so much character to the neighborhood.",
+          "tags": ["Food", "Culture", "Art"],
+          "helpful": 45
+        },
+        {
+          "id": "m2",
+          "author": "James L.",
+          "rating": 3.8,
+          "date": "2024-02-10",
+          "content": "Great location with excellent transit options. Some areas can be noisy and parking is challenging. The diversity of restaurants and shops makes up for it.",
+          "tags": ["Transit", "Parking", "Food"],
+          "helpful": 32
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 1050000},
+          {"year": 2021, "value": 1100000},
+          {"year": 2022, "value": 1150000},
+          {"year": 2023, "value": 1180000},
+          {"year": 2024, "value": 1200000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 52.1},
+          {"year": 2021, "value": 50.4},
+          {"year": 2022, "value": 48.9},
+          {"year": 2023, "value": 47.8},
+          {"year": 2024, "value": 47.3}
+        ]
+      }
+    },
+    {
+      "name": "Pacific Heights",
+      "metrics": {
+        "safetyScore": 9.2,
+        "educationScore": 9.5,
+        "transitScore": 7.8,
+        "amenitiesScore": 8.5,
+        "walkScore": 87,
+        "bikeScore": 72,
+        "averagePrice": 2800000,
+        "pricePerSqFt": 1450,
+        "medianRent": 4800,
+        "yearOverYearPrice": 1.8,
+        "daysOnMarket": 35,
+        "crimeRate": {
+          "violent": 1.8,
+          "property": 28.4,
+          "total": 30.2
+        },
+        "schoolData": {
+          "publicSchools": 5,
+          "privateSchools": 8,
+          "averageRating": 9.2,
+          "studentTeacherRatio": 14
+        }
+      },
+      "demographics": {
+        "population": 28000,
+        "medianAge": 42,
+        "householdIncome": 185000,
+        "education": {
+          "highSchool": 98,
+          "bachelors": 82,
+          "graduate": 48
+        },
+        "housing": {
+          "ownedPercentage": 52,
+          "rentedPercentage": 48
+        }
+      },
+      "amenities": {
+        "restaurants": 156,
+        "bars": 42,
+        "cafes": 58,
+        "groceryStores": 12,
+        "parks": 5,
+        "gyms": 8,
+        "schools": 13,
+        "hospitals": 1,
+        "publicTransitStops": 12
+      },
+      "features": [
+        "Luxury Homes",
+        "Bay Views",
+        "Private Schools",
+        "Upscale Shopping",
+        "Historic Mansions",
+        "Tree-lined Streets",
+        "High-end Boutiques",
+        "Quiet Atmosphere"
+      ],
+      "reviews": [
+        {
+          "id": "ph1",
+          "author": "Michael R.",
+          "rating": 4.8,
+          "date": "2024-02-18",
+          "content": "The views are spectacular, and the neighborhood is immaculately maintained. Yes, it's expensive, but you get what you pay for - safety, beauty, and excellent schools.",
+          "tags": ["Views", "Safety", "Schools"],
+          "helpful": 62
+        },
+        {
+          "id": "ph2",
+          "author": "Elizabeth W.",
+          "rating": 4.6,
+          "date": "2024-02-12",
+          "content": "Gorgeous architecture and very peaceful. The boutique shopping on Fillmore is delightful. Only downside is the hills can be challenging for walking.",
+          "tags": ["Shopping", "Architecture", "Hills"],
+          "helpful": 48
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 2500000},
+          {"year": 2021, "value": 2600000},
+          {"year": 2022, "value": 2680000},
+          {"year": 2023, "value": 2750000},
+          {"year": 2024, "value": 2800000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 32.8},
+          {"year": 2021, "value": 31.9},
+          {"year": 2022, "value": 31.2},
+          {"year": 2023, "value": 30.5},
+          {"year": 2024, "value": 30.2}
+        ]
+      }
+    },
+    {
+      "name": "Hayes Valley",
+      "metrics": {
+        "safetyScore": 8.2,
+        "educationScore": 8.0,
+        "transitScore": 8.5,
+        "amenitiesScore": 8.8,
+        "walkScore": 94,
+        "bikeScore": 88,
+        "averagePrice": 1650000,
+        "pricePerSqFt": 1150,
+        "medianRent": 3800,
+        "yearOverYearPrice": 2.1,
+        "daysOnMarket": 25,
+        "crimeRate": {
+          "violent": 3.4,
+          "property": 35.6,
+          "total": 39.0
+        },
+        "schoolData": {
+          "publicSchools": 6,
+          "privateSchools": 3,
+          "averageRating": 8.0,
+          "studentTeacherRatio": 16
+        }
+      },
+      "demographics": {
+        "population": 32000,
+        "medianAge": 36,
+        "householdIncome": 128000,
+        "education": {
+          "highSchool": 95,
+          "bachelors": 75,
+          "graduate": 38
+        },
+        "housing": {
+          "ownedPercentage": 35,
+          "rentedPercentage": 65
+        }
+      },
+      "amenities": {
+        "restaurants": 185,
+        "bars": 52,
+        "cafes": 68,
+        "groceryStores": 10,
+        "parks": 6,
+        "gyms": 10,
+        "schools": 9,
+        "hospitals": 0,
+        "publicTransitStops": 15
+      },
+      "features": [
+        "Boutique Shopping",
+        "Performing Arts",
+        "Trendy Restaurants",
+        "Modern Condos",
+        "Art Galleries",
+        "Coffee Culture",
+        "Urban Parks",
+        "Design Shops"
+      ],
+      "reviews": [
+        {
+          "id": "hv1",
+          "author": "David K.",
+          "rating": 4.7,
+          "date": "2024-02-20",
+          "content": "Hayes Valley has transformed into one of SF's best neighborhoods. Amazing restaurants, unique shops, and great access to public transit. Patricia's Green is always lively!",
+          "tags": ["Shopping", "Food", "Transit"],
+          "helpful": 55
+        },
+        {
+          "id": "hv2",
+          "author": "Rachel T.",
+          "rating": 4.4,
+          "date": "2024-02-14",
+          "content": "Perfect mix of urban amenities and neighborhood feel. Love the independent boutiques and coffee shops. Can be busy on weekends with shoppers.",
+          "tags": ["Shopping", "Cafes", "Busy"],
+          "helpful": 41
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 1450000},
+          {"year": 2021, "value": 1520000},
+          {"year": 2022, "value": 1580000},
+          {"year": 2023, "value": 1620000},
+          {"year": 2024, "value": 1650000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 42.5},
+          {"year": 2021, "value": 41.2},
+          {"year": 2022, "value": 40.1},
+          {"year": 2023, "value": 39.4},
+          {"year": 2024, "value": 39.0}
+        ]
+      }
+    },
+    {
+      "name": "North Beach",
+      "metrics": {
+        "safetyScore": 8.5,
+        "educationScore": 7.8,
+        "transitScore": 8.7,
+        "amenitiesScore": 9.4,
+        "walkScore": 98,
+        "bikeScore": 82,
+        "averagePrice": 1450000,
+        "pricePerSqFt": 1100,
+        "medianRent": 3500,
+        "yearOverYearPrice": 1.9,
+        "daysOnMarket": 30,
+        "crimeRate": {
+          "violent": 3.8,
+          "property": 38.2,
+          "total": 42.0
+        },
+        "schoolData": {
+          "publicSchools": 4,
+          "privateSchools": 2,
+          "averageRating": 7.8,
+          "studentTeacherRatio": 17
+        }
+      },
+      "demographics": {
+        "population": 35000,
+        "medianAge": 38,
+        "householdIncome": 115000,
+        "education": {
+          "highSchool": 94,
+          "bachelors": 72,
+          "graduate": 35
+        },
+        "housing": {
+          "ownedPercentage": 32,
+          "rentedPercentage": 68
+        }
+      },
+      "amenities": {
+        "restaurants": 215,
+        "bars": 75,
+        "cafes": 92,
+        "groceryStores": 18,
+        "parks": 4,
+        "gyms": 8,
+        "schools": 6,
+        "hospitals": 0,
+        "publicTransitStops": 16
+      },
+      "features": [
+        "Italian Heritage",
+        "Tourist Spots",
+        "Historic Cafes",
+        "Comedy Clubs",
+        "Beach Access",
+        "City Views",
+        "Authentic Cuisine",
+        "Vibrant Nightlife"
+      ],
+      "reviews": [
+        {
+          "id": "nb1",
+          "author": "Marco P.",
+          "rating": 4.6,
+          "date": "2024-02-19",
+          "content": "The heart of Italian culture in SF! Amazing restaurants, historic cafes, and the best cannoli you'll find outside of Italy. Washington Square Park is always full of life.",
+          "tags": ["Italian", "Food", "Parks"],
+          "helpful": 58
+        },
+        {
+          "id": "nb2",
+          "author": "Linda H.",
+          "rating": 4.2,
+          "date": "2024-02-16",
+          "content": "Love the European vibe and proximity to everything. Tourist crowds can be intense on weekends, but the local spots are worth discovering.",
+          "tags": ["Culture", "Tourist", "Local"],
+          "helpful": 44
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 1280000},
+          {"year": 2021, "value": 1340000},
+          {"year": 2022, "value": 1390000},
+          {"year": 2023, "value": 1420000},
+          {"year": 2024, "value": 1450000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 45.6},
+          {"year": 2021, "value": 44.2},
+          {"year": 2022, "value": 43.1},
+          {"year": 2023, "value": 42.4},
+          {"year": 2024, "value": 42.0}
+        ]
+      }
+    },
+    {
+      "name": "Marina District",
+      "metrics": {
+        "safetyScore": 9.2,
+        "educationScore": 8.5,
+        "transitScore": 7.8,
+        "amenitiesScore": 9.0,
+        "walkScore": 96,
+        "bikeScore": 85,
+        "averagePrice": 2100000,
+        "pricePerSqFt": 1350,
+        "medianRent": 4200,
+        "yearOverYearPrice": 2.2,
+        "daysOnMarket": 28,
+        "crimeRate": {
+          "violent": 2.1,
+          "property": 32.4,
+          "total": 34.5
+        },
+        "schoolData": {
+          "publicSchools": 3,
+          "privateSchools": 4,
+          "averageRating": 8.6,
+          "studentTeacherRatio": 15
+        }
+      },
+      "demographics": {
+        "population": 25000,
+        "medianAge": 32,
+        "householdIncome": 165000,
+        "education": {
+          "highSchool": 98,
+          "bachelors": 85,
+          "graduate": 45
+        },
+        "housing": {
+          "ownedPercentage": 42,
+          "rentedPercentage": 58
+        }
+      },
+      "amenities": {
+        "restaurants": 168,
+        "bars": 48,
+        "cafes": 72,
+        "groceryStores": 12,
+        "parks": 7,
+        "gyms": 15,
+        "schools": 7,
+        "hospitals": 0,
+        "publicTransitStops": 12
+      },
+      "features": [
+        "Waterfront Location",
+        "Marina Green",
+        "Palace of Fine Arts",
+        "Upscale Boutiques",
+        "Fitness Culture",
+        "Young Professional Hub",
+        "Bay Views",
+        "Outdoor Activities"
+      ],
+      "reviews": [
+        {
+          "id": "md1",
+          "author": "Sarah K.",
+          "rating": 4.8,
+          "date": "2024-02-22",
+          "content": "Perfect mix of outdoor activities and city life. Love running along Marina Green and the easy access to Chestnut Street's shops and restaurants.",
+          "tags": ["Outdoors", "Shopping", "Location"],
+          "helpful": 72
+        },
+        {
+          "id": "md2",
+          "author": "James R.",
+          "rating": 4.5,
+          "date": "2024-02-18",
+          "content": "Great neighborhood for young professionals. Plenty of fitness options and healthy restaurants. Weekend brunch scene is amazing!",
+          "tags": ["Fitness", "Food", "Lifestyle"],
+          "helpful": 65
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 1850000},
+          {"year": 2021, "value": 1920000},
+          {"year": 2022, "value": 1980000},
+          {"year": 2023, "value": 2050000},
+          {"year": 2024, "value": 2100000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 38.2},
+          {"year": 2021, "value": 37.1},
+          {"year": 2022, "value": 35.8},
+          {"year": 2023, "value": 35.0},
+          {"year": 2024, "value": 34.5}
+        ]
+      }
+    },
+    {
+      "name": "Russian Hill",
+      "metrics": {
+        "safetyScore": 8.8,
+        "educationScore": 8.2,
+        "transitScore": 8.5,
+        "amenitiesScore": 8.8,
+        "walkScore": 95,
+        "bikeScore": 70,
+        "averagePrice": 1950000,
+        "pricePerSqFt": 1280,
+        "medianRent": 3900,
+        "yearOverYearPrice": 1.7,
+        "daysOnMarket": 32,
+        "crimeRate": {
+          "violent": 2.5,
+          "property": 34.8,
+          "total": 37.3
+        },
+        "schoolData": {
+          "publicSchools": 4,
+          "privateSchools": 3,
+          "averageRating": 8.4,
+          "studentTeacherRatio": 16
+        }
+      },
+      "demographics": {
+        "population": 22000,
+        "medianAge": 39,
+        "householdIncome": 145000,
+        "education": {
+          "highSchool": 97,
+          "bachelors": 80,
+          "graduate": 42
+        },
+        "housing": {
+          "ownedPercentage": 45,
+          "rentedPercentage": 55
+        }
+      },
+      "amenities": {
+        "restaurants": 145,
+        "bars": 38,
+        "cafes": 62,
+        "groceryStores": 8,
+        "parks": 5,
+        "gyms": 6,
+        "schools": 7,
+        "hospitals": 0,
+        "publicTransitStops": 14
+      },
+      "features": [
+        "Lombard Street",
+        "City Views",
+        "Historic Architecture",
+        "Cable Cars",
+        "Hidden Staircases",
+        "Boutique Shopping",
+        "Quiet Streets",
+        "Hyde Street Shops"
+      ],
+      "reviews": [
+        {
+          "id": "rh1",
+          "author": "Michael T.",
+          "rating": 4.7,
+          "date": "2024-02-20",
+          "content": "The views are unbeatable! Love the mix of tourist attractions and quiet residential streets. The hills are a workout but worth it.",
+          "tags": ["Views", "Residential", "Tourist"],
+          "helpful": 82
+        },
+        {
+          "id": "rh2",
+          "author": "Emily W.",
+          "rating": 4.4,
+          "date": "2024-02-15",
+          "content": "Charming neighborhood with great character. The historic homes and hidden staircases make every walk an adventure.",
+          "tags": ["Architecture", "Character", "Walking"],
+          "helpful": 67
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 1720000},
+          {"year": 2021, "value": 1780000},
+          {"year": 2022, "value": 1850000},
+          {"year": 2023, "value": 1920000},
+          {"year": 2024, "value": 1950000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 41.5},
+          {"year": 2021, "value": 40.2},
+          {"year": 2022, "value": 38.9},
+          {"year": 2023, "value": 37.8},
+          {"year": 2024, "value": 37.3}
+        ]
+      }
+    },
+    {
+      "name": "Noe Valley",
+      "metrics": {
+        "safetyScore": 9.0,
+        "educationScore": 8.8,
+        "transitScore": 8.2,
+        "amenitiesScore": 8.5,
+        "walkScore": 92,
+        "bikeScore": 75,
+        "averagePrice": 1850000,
+        "pricePerSqFt": 1200,
+        "medianRent": 3800,
+        "yearOverYearPrice": 1.5,
+        "daysOnMarket": 35,
+        "crimeRate": {
+          "violent": 2.2,
+          "property": 30.5,
+          "total": 32.7
+        },
+        "schoolData": {
+          "publicSchools": 5,
+          "privateSchools": 3,
+          "averageRating": 8.7,
+          "studentTeacherRatio": 15
+        }
+      },
+      "demographics": {
+        "population": 28000,
+        "medianAge": 37,
+        "householdIncome": 155000,
+        "education": {
+          "highSchool": 96,
+          "bachelors": 78,
+          "graduate": 44
+        },
+        "housing": {
+          "ownedPercentage": 48,
+          "rentedPercentage": 52
+        }
+      },
+      "amenities": {
+        "restaurants": 125,
+        "bars": 32,
+        "cafes": 58,
+        "groceryStores": 15,
+        "parks": 8,
+        "gyms": 7,
+        "schools": 8,
+        "hospitals": 0,
+        "publicTransitStops": 18
+      },
+      "features": [
+        "Family-Friendly",
+        "24th Street Shopping",
+        "Victorian Homes",
+        "Farmers Market",
+        "Sunny Microclimate",
+        "Dog-Friendly",
+        "Local Boutiques",
+        "Community Events"
+      ],
+      "reviews": [
+        {
+          "id": "nv1",
+          "author": "Rachel M.",
+          "rating": 4.9,
+          "date": "2024-02-21",
+          "content": "Perfect family neighborhood! Great schools, plenty of parks, and a wonderful community feel. The Saturday farmers market is a highlight of the week.",
+          "tags": ["Family", "Community", "Parks"],
+          "helpful": 89
+        },
+        {
+          "id": "nv2",
+          "author": "David L.",
+          "rating": 4.6,
+          "date": "2024-02-17",
+          "content": "Love the village feel while still being in the city. 24th Street has everything you need, and it's one of the sunniest spots in SF.",
+          "tags": ["Shopping", "Weather", "Location"],
+          "helpful": 76
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 1650000},
+          {"year": 2021, "value": 1720000},
+          {"year": 2022, "value": 1780000},
+          {"year": 2023, "value": 1820000},
+          {"year": 2024, "value": 1850000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 36.8},
+          {"year": 2021, "value": 35.2},
+          {"year": 2022, "value": 33.9},
+          {"year": 2023, "value": 33.1},
+          {"year": 2024, "value": 32.7}
+        ]
+      }
+    },
+    {
+      "name": "Financial District",
+      "metrics": {
+        "safetyScore": 8.0,
+        "educationScore": 7.5,
+        "transitScore": 9.2,
+        "amenitiesScore": 8.8,
+        "walkScore": 99,
+        "bikeScore": 80,
+        "averagePrice": 1250000,
+        "pricePerSqFt": 1100,
+        "medianRent": 3600,
+        "yearOverYearPrice": 1.2,
+        "daysOnMarket": 45,
+        "crimeRate": {
+          "violent": 4.2,
+          "property": 42.8,
+          "total": 47.0
+        },
+        "schoolData": {
+          "publicSchools": 2,
+          "privateSchools": 1,
+          "averageRating": 7.2,
+          "studentTeacherRatio": 18
+        }
+      },
+      "demographics": {
+        "population": 15000,
+        "medianAge": 34,
+        "householdIncome": 135000,
+        "education": {
+          "highSchool": 95,
+          "bachelors": 82,
+          "graduate": 48
+        },
+        "housing": {
+          "ownedPercentage": 25,
+          "rentedPercentage": 75
+        }
+      },
+      "amenities": {
+        "restaurants": 285,
+        "bars": 95,
+        "cafes": 125,
+        "groceryStores": 22,
+        "parks": 3,
+        "gyms": 18,
+        "schools": 3,
+        "hospitals": 0,
+        "publicTransitStops": 25
+      },
+      "features": [
+        "Business Hub",
+        "Skyscrapers",
+        "Public Transit",
+        "Food Trucks",
+        "Shopping Centers",
+        "Historic Buildings",
+        "Ferry Building",
+        "Nightlife"
+      ],
+      "reviews": [
+        {
+          "id": "fd1",
+          "author": "Alex C.",
+          "rating": 4.3,
+          "date": "2024-02-23",
+          "content": "Perfect for young professionals! Amazing food options and easy access to public transit. Gets quiet on weekends which can be nice.",
+          "tags": ["Professional", "Food", "Transit"],
+          "helpful": 92
+        },
+        {
+          "id": "fd2",
+          "author": "Sofia R.",
+          "rating": 4.1,
+          "date": "2024-02-19",
+          "content": "Great location for work, lots of lunch spots and after-work bars. The Ferry Building farmers market is amazing on weekends.",
+          "tags": ["Location", "Food", "Nightlife"],
+          "helpful": 85
+        }
+      ],
+      "trends": {
+        "propertyValue": [
+          {"year": 2020, "value": 1150000},
+          {"year": 2021, "value": 1180000},
+          {"year": 2022, "value": 1210000},
+          {"year": 2023, "value": 1235000},
+          {"year": 2024, "value": 1250000}
+        ],
+        "crimeRate": [
+          {"year": 2020, "value": 52.5},
+          {"year": 2021, "value": 50.8},
+          {"year": 2022, "value": 48.9},
+          {"year": 2023, "value": 47.6},
+          {"year": 2024, "value": 47.0}
+        ]
+      }
+    }
+  ]
+} 

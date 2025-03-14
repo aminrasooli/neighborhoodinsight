@@ -1,0 +1,444 @@
+2025-03-12 23:26:18,689 - INFO - Starting data processing...
+2025-03-12 23:26:18,690 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-12 23:26:18,709 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-12 23:26:18,713 - ERROR - Error processing reviews data: 'date'
+2025-03-12 23:26:18,718 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-12 23:26:18,720 - INFO - Saved merged data to processed_data/merged_data_20250312_232618.json
+2025-03-12 23:28:31,536 - INFO - Starting data processing...
+2025-03-12 23:28:31,537 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-12 23:28:31,572 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-12 23:28:31,579 - ERROR - Error processing reviews data: 'date'
+2025-03-12 23:28:31,587 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-12 23:28:31,590 - INFO - Saved merged data to processed_data/merged_data_20250312_232831.json
+2025-03-12 23:56:19,264 - INFO - Starting data processing...
+2025-03-12 23:56:19,265 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-12 23:56:19,310 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-12 23:56:19,313 - ERROR - Error processing reviews data: 'date'
+2025-03-12 23:56:19,320 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-12 23:56:19,323 - INFO - Saved merged data to processed_data/merged_data_20250312_235619.json
+2025-03-12 23:58:32,058 - INFO - Starting data processing...
+2025-03-12 23:58:32,058 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-12 23:58:32,111 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-12 23:58:32,122 - ERROR - Error processing reviews data: 'date'
+2025-03-12 23:58:32,137 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-12 23:58:32,141 - INFO - Saved merged data to processed_data/merged_data_20250312_235832.json
+2025-03-13 00:26:19,832 - INFO - Starting data processing...
+2025-03-13 00:26:19,833 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 00:26:19,893 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 00:26:19,903 - ERROR - Error processing reviews data: 'date'
+2025-03-13 00:26:19,933 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 00:26:19,938 - INFO - Saved merged data to processed_data/merged_data_20250313_002619.json
+2025-03-13 00:28:32,640 - INFO - Starting data processing...
+2025-03-13 00:28:32,640 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 00:28:32,704 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 00:28:32,713 - ERROR - Error processing reviews data: 'date'
+2025-03-13 00:28:32,731 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 00:28:32,737 - INFO - Saved merged data to processed_data/merged_data_20250313_002832.json
+2025-03-13 00:56:20,458 - INFO - Starting data processing...
+2025-03-13 00:56:20,462 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 00:56:20,530 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 00:56:20,543 - ERROR - Error processing reviews data: 'date'
+2025-03-13 00:56:20,565 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 00:56:20,572 - INFO - Saved merged data to processed_data/merged_data_20250313_005620.json
+2025-03-13 00:58:33,190 - INFO - Starting data processing...
+2025-03-13 00:58:33,192 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 00:58:33,276 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 00:58:33,290 - ERROR - Error processing reviews data: 'date'
+2025-03-13 00:58:33,313 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 00:58:33,320 - INFO - Saved merged data to processed_data/merged_data_20250313_005833.json
+2025-03-13 01:26:21,090 - INFO - Starting data processing...
+2025-03-13 01:26:21,092 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 01:26:21,183 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 01:26:21,198 - ERROR - Error processing reviews data: 'date'
+2025-03-13 01:26:21,227 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 01:26:21,236 - INFO - Saved merged data to processed_data/merged_data_20250313_012621.json
+2025-03-13 01:28:33,854 - INFO - Starting data processing...
+2025-03-13 01:28:33,855 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 01:28:33,956 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 01:28:33,973 - ERROR - Error processing reviews data: 'date'
+2025-03-13 01:28:34,003 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 01:28:34,012 - INFO - Saved merged data to processed_data/merged_data_20250313_012834.json
+2025-03-13 01:56:21,707 - INFO - Starting data processing...
+2025-03-13 01:56:21,708 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 01:56:21,837 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 01:56:21,846 - ERROR - Error processing reviews data: 'date'
+2025-03-13 01:56:21,876 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 01:56:21,885 - INFO - Saved merged data to processed_data/merged_data_20250313_015621.json
+2025-03-13 01:58:34,474 - INFO - Starting data processing...
+2025-03-13 01:58:34,474 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 01:58:34,609 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 01:58:34,611 - ERROR - Error processing reviews data: 'date'
+2025-03-13 01:58:34,649 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 01:58:34,659 - INFO - Saved merged data to processed_data/merged_data_20250313_015834.json
+2025-03-13 02:26:22,319 - INFO - Starting data processing...
+2025-03-13 02:26:22,320 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 02:26:22,468 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 02:26:22,482 - ERROR - Error processing reviews data: 'date'
+2025-03-13 02:26:22,515 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 02:26:22,527 - INFO - Saved merged data to processed_data/merged_data_20250313_022622.json
+2025-03-13 02:28:35,074 - INFO - Starting data processing...
+2025-03-13 02:28:35,075 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 02:28:35,226 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 02:28:35,241 - ERROR - Error processing reviews data: 'date'
+2025-03-13 02:28:35,277 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 02:28:35,289 - INFO - Saved merged data to processed_data/merged_data_20250313_022835.json
+2025-03-13 02:56:23,024 - INFO - Starting data processing...
+2025-03-13 02:56:23,024 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 02:56:23,197 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 02:56:23,212 - ERROR - Error processing reviews data: 'date'
+2025-03-13 02:56:23,250 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 02:56:23,263 - INFO - Saved merged data to processed_data/merged_data_20250313_025623.json
+2025-03-13 02:58:35,758 - INFO - Starting data processing...
+2025-03-13 02:58:35,760 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 02:58:35,900 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 02:58:35,935 - ERROR - Error processing reviews data: 'date'
+2025-03-13 02:58:35,981 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 02:58:35,995 - INFO - Saved merged data to processed_data/merged_data_20250313_025835.json
+2025-03-13 03:26:23,675 - INFO - Starting data processing...
+2025-03-13 03:26:23,676 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 03:26:23,838 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 03:26:23,886 - ERROR - Error processing reviews data: 'date'
+2025-03-13 03:26:23,931 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 03:26:23,949 - INFO - Saved merged data to processed_data/merged_data_20250313_032623.json
+2025-03-13 03:28:36,426 - INFO - Starting data processing...
+2025-03-13 03:28:36,430 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 03:28:36,589 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 03:28:36,639 - ERROR - Error processing reviews data: 'date'
+2025-03-13 03:28:36,684 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 03:28:36,700 - INFO - Saved merged data to processed_data/merged_data_20250313_032836.json
+2025-03-13 03:56:24,395 - INFO - Starting data processing...
+2025-03-13 03:56:24,396 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 03:56:24,568 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 03:56:24,615 - ERROR - Error processing reviews data: 'date'
+2025-03-13 03:56:24,667 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 03:56:24,684 - INFO - Saved merged data to processed_data/merged_data_20250313_035624.json
+2025-03-13 03:58:37,243 - INFO - Starting data processing...
+2025-03-13 03:58:37,244 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 03:58:37,420 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 03:58:37,468 - ERROR - Error processing reviews data: 'date'
+2025-03-13 03:58:37,528 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 03:58:37,547 - INFO - Saved merged data to processed_data/merged_data_20250313_035837.json
+2025-03-13 04:26:25,200 - INFO - Starting data processing...
+2025-03-13 04:26:25,201 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 04:26:25,422 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 04:26:25,424 - ERROR - Error processing reviews data: 'date'
+2025-03-13 04:26:25,500 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 04:26:25,520 - INFO - Saved merged data to processed_data/merged_data_20250313_042625.json
+2025-03-13 04:28:38,068 - INFO - Starting data processing...
+2025-03-13 04:28:38,069 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 04:28:38,272 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 04:28:38,325 - ERROR - Error processing reviews data: 'date'
+2025-03-13 04:28:38,380 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 04:28:38,399 - INFO - Saved merged data to processed_data/merged_data_20250313_042838.json
+2025-03-13 04:56:26,008 - INFO - Starting data processing...
+2025-03-13 04:56:26,009 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 04:56:26,217 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 04:56:26,260 - ERROR - Error processing reviews data: 'date'
+2025-03-13 04:56:26,349 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 04:56:26,371 - INFO - Saved merged data to processed_data/merged_data_20250313_045626.json
+2025-03-13 04:58:38,850 - INFO - Starting data processing...
+2025-03-13 04:58:38,851 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 04:58:39,068 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 04:58:39,124 - ERROR - Error processing reviews data: 'date'
+2025-03-13 04:58:39,187 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 04:58:39,208 - INFO - Saved merged data to processed_data/merged_data_20250313_045839.json
+2025-03-13 05:26:26,810 - INFO - Starting data processing...
+2025-03-13 05:26:26,811 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 05:26:27,047 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 05:26:27,093 - ERROR - Error processing reviews data: 'date'
+2025-03-13 05:26:27,183 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 05:26:27,207 - INFO - Saved merged data to processed_data/merged_data_20250313_052627.json
+2025-03-13 05:28:39,666 - INFO - Starting data processing...
+2025-03-13 05:28:39,667 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 05:28:39,900 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 05:28:39,935 - ERROR - Error processing reviews data: 'date'
+2025-03-13 05:28:40,028 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 05:28:40,052 - INFO - Saved merged data to processed_data/merged_data_20250313_052840.json
+2025-03-13 05:56:27,682 - INFO - Starting data processing...
+2025-03-13 05:56:27,683 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 05:56:27,920 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 05:56:27,976 - ERROR - Error processing reviews data: 'date'
+2025-03-13 05:56:28,075 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 05:56:28,100 - INFO - Saved merged data to processed_data/merged_data_20250313_055628.json
+2025-03-13 05:58:40,525 - INFO - Starting data processing...
+2025-03-13 05:58:40,526 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 05:58:40,774 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 05:58:40,815 - ERROR - Error processing reviews data: 'date'
+2025-03-13 05:58:40,926 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 05:58:40,950 - INFO - Saved merged data to processed_data/merged_data_20250313_055840.json
+2025-03-13 06:26:28,554 - INFO - Starting data processing...
+2025-03-13 06:26:28,555 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 06:26:28,817 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 06:26:28,872 - ERROR - Error processing reviews data: 'date'
+2025-03-13 06:26:28,979 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 06:26:29,006 - INFO - Saved merged data to processed_data/merged_data_20250313_062629.json
+2025-03-13 06:28:41,448 - INFO - Starting data processing...
+2025-03-13 06:28:41,451 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 06:28:41,718 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 06:28:41,768 - ERROR - Error processing reviews data: 'date'
+2025-03-13 06:28:41,875 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 06:28:41,905 - INFO - Saved merged data to processed_data/merged_data_20250313_062841.json
+2025-03-13 06:56:29,482 - INFO - Starting data processing...
+2025-03-13 06:56:29,482 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 06:56:29,758 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 06:56:29,805 - ERROR - Error processing reviews data: 'date'
+2025-03-13 06:56:29,932 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 06:56:29,961 - INFO - Saved merged data to processed_data/merged_data_20250313_065629.json
+2025-03-13 06:58:42,342 - INFO - Starting data processing...
+2025-03-13 06:58:42,343 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 06:58:42,610 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 06:58:42,675 - ERROR - Error processing reviews data: 'date'
+2025-03-13 06:58:42,802 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 06:58:42,833 - INFO - Saved merged data to processed_data/merged_data_20250313_065842.json
+2025-03-13 07:26:30,492 - INFO - Starting data processing...
+2025-03-13 07:26:30,493 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 07:26:30,763 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 07:26:30,822 - ERROR - Error processing reviews data: 'date'
+2025-03-13 07:26:30,948 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 07:26:30,980 - INFO - Saved merged data to processed_data/merged_data_20250313_072630.json
+2025-03-13 07:28:43,358 - INFO - Starting data processing...
+2025-03-13 07:28:43,359 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 07:28:43,632 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 07:28:43,704 - ERROR - Error processing reviews data: 'date'
+2025-03-13 07:28:43,833 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 07:28:43,867 - INFO - Saved merged data to processed_data/merged_data_20250313_072843.json
+2025-03-13 07:56:31,526 - INFO - Starting data processing...
+2025-03-13 07:56:31,528 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 07:56:31,822 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 07:56:31,910 - ERROR - Error processing reviews data: 'date'
+2025-03-13 07:56:32,007 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 07:56:32,039 - INFO - Saved merged data to processed_data/merged_data_20250313_075632.json
+2025-03-13 07:58:44,382 - INFO - Starting data processing...
+2025-03-13 07:58:44,383 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 07:58:44,668 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 07:58:44,748 - ERROR - Error processing reviews data: 'date'
+2025-03-13 07:58:44,890 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 07:58:44,924 - INFO - Saved merged data to processed_data/merged_data_20250313_075844.json
+2025-03-13 08:26:32,583 - INFO - Starting data processing...
+2025-03-13 08:26:32,585 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 08:26:32,863 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 08:26:32,898 - ERROR - Error processing reviews data: 'date'
+2025-03-13 08:26:33,113 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 08:26:33,153 - INFO - Saved merged data to processed_data/merged_data_20250313_082633.json
+2025-03-13 08:28:45,403 - INFO - Starting data processing...
+2025-03-13 08:28:45,404 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 08:28:45,686 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 08:28:45,767 - ERROR - Error processing reviews data: 'date'
+2025-03-13 08:28:45,912 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 08:28:45,947 - INFO - Saved merged data to processed_data/merged_data_20250313_082845.json
+2025-03-13 08:56:33,620 - INFO - Starting data processing...
+2025-03-13 08:56:33,621 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 08:56:33,915 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 08:56:33,997 - ERROR - Error processing reviews data: 'date'
+2025-03-13 08:56:34,155 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 08:56:34,193 - INFO - Saved merged data to processed_data/merged_data_20250313_085634.json
+2025-03-13 08:58:46,327 - INFO - Starting data processing...
+2025-03-13 08:58:46,329 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 08:58:46,641 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 08:58:46,671 - ERROR - Error processing reviews data: 'date'
+2025-03-13 08:58:46,896 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 08:58:46,933 - INFO - Saved merged data to processed_data/merged_data_20250313_085846.json
+2025-03-13 09:26:34,613 - INFO - Starting data processing...
+2025-03-13 09:26:34,614 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 09:26:34,924 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 09:26:34,943 - ERROR - Error processing reviews data: 'date'
+2025-03-13 09:26:35,192 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 09:26:35,232 - INFO - Saved merged data to processed_data/merged_data_20250313_092635.json
+2025-03-13 09:28:47,317 - INFO - Starting data processing...
+2025-03-13 09:28:47,319 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 09:28:47,649 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 09:28:47,734 - ERROR - Error processing reviews data: 'date'
+2025-03-13 09:28:47,907 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 09:28:47,946 - INFO - Saved merged data to processed_data/merged_data_20250313_092847.json
+2025-03-13 09:56:35,689 - INFO - Starting data processing...
+2025-03-13 09:56:35,690 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 09:56:36,038 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 09:56:36,060 - ERROR - Error processing reviews data: 'date'
+2025-03-13 09:56:36,314 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 09:56:36,356 - INFO - Saved merged data to processed_data/merged_data_20250313_095636.json
+2025-03-13 09:58:48,363 - INFO - Starting data processing...
+2025-03-13 09:58:48,366 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 09:58:48,701 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 09:58:48,742 - ERROR - Error processing reviews data: 'date'
+2025-03-13 09:58:49,031 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 09:58:49,079 - INFO - Saved merged data to processed_data/merged_data_20250313_095849.json
+2025-03-13 10:26:36,667 - INFO - Starting data processing...
+2025-03-13 10:26:36,668 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 10:26:36,999 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 10:26:37,045 - ERROR - Error processing reviews data: 'date'
+2025-03-13 10:26:37,307 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 10:26:37,349 - INFO - Saved merged data to processed_data/merged_data_20250313_102637.json
+2025-03-13 10:28:49,298 - INFO - Starting data processing...
+2025-03-13 10:28:49,299 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 10:28:49,652 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 10:28:49,694 - ERROR - Error processing reviews data: 'date'
+2025-03-13 10:28:49,952 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 10:28:49,994 - INFO - Saved merged data to processed_data/merged_data_20250313_102849.json
+2025-03-13 10:56:37,703 - INFO - Starting data processing...
+2025-03-13 10:56:37,705 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 10:56:38,058 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 10:56:38,150 - ERROR - Error processing reviews data: 'date'
+2025-03-13 10:56:38,343 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 10:56:38,387 - INFO - Saved merged data to processed_data/merged_data_20250313_105638.json
+2025-03-13 10:58:50,288 - INFO - Starting data processing...
+2025-03-13 10:58:50,289 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 10:58:50,652 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 10:58:50,752 - ERROR - Error processing reviews data: 'date'
+2025-03-13 10:58:50,955 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 10:58:51,008 - INFO - Saved merged data to processed_data/merged_data_20250313_105851.json
+2025-03-13 11:26:38,704 - INFO - Starting data processing...
+2025-03-13 11:26:38,705 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 11:26:39,118 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 11:26:39,153 - ERROR - Error processing reviews data: 'date'
+2025-03-13 11:26:39,441 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 11:26:39,487 - INFO - Saved merged data to processed_data/merged_data_20250313_112639.json
+2025-03-13 11:28:51,343 - INFO - Starting data processing...
+2025-03-13 11:28:51,343 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 11:28:51,763 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 11:28:51,852 - ERROR - Error processing reviews data: 'date'
+2025-03-13 11:28:52,072 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 11:28:52,117 - INFO - Saved merged data to processed_data/merged_data_20250313_112852.json
+2025-03-13 11:56:39,899 - INFO - Starting data processing...
+2025-03-13 11:56:39,900 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 11:56:40,337 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 11:56:40,436 - ERROR - Error processing reviews data: 'date'
+2025-03-13 11:56:40,667 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 11:56:40,714 - INFO - Saved merged data to processed_data/merged_data_20250313_115640.json
+2025-03-13 11:58:52,429 - INFO - Starting data processing...
+2025-03-13 11:58:52,433 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 11:58:52,853 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 11:58:52,888 - ERROR - Error processing reviews data: 'date'
+2025-03-13 11:58:53,192 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 11:58:53,242 - INFO - Saved merged data to processed_data/merged_data_20250313_115853.json
+2025-03-13 12:26:41,527 - INFO - Starting data processing...
+2025-03-13 12:26:41,528 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 12:26:41,936 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 12:26:41,980 - ERROR - Error processing reviews data: 'date'
+2025-03-13 12:26:42,299 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 12:26:42,349 - INFO - Saved merged data to processed_data/merged_data_20250313_122642.json
+2025-03-13 12:28:53,976 - INFO - Starting data processing...
+2025-03-13 12:28:53,977 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 12:28:54,407 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 12:28:54,445 - ERROR - Error processing reviews data: 'date'
+2025-03-13 12:28:54,756 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 12:28:54,804 - INFO - Saved merged data to processed_data/merged_data_20250313_122854.json
+2025-03-13 12:56:42,810 - INFO - Starting data processing...
+2025-03-13 12:56:42,811 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 12:56:43,274 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 12:56:43,376 - ERROR - Error processing reviews data: 'date'
+2025-03-13 12:56:43,618 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 12:56:43,669 - INFO - Saved merged data to processed_data/merged_data_20250313_125643.json
+2025-03-13 12:58:55,248 - INFO - Starting data processing...
+2025-03-13 12:58:55,250 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 12:58:55,699 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 12:58:55,807 - ERROR - Error processing reviews data: 'date'
+2025-03-13 12:58:56,062 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 12:58:56,124 - INFO - Saved merged data to processed_data/merged_data_20250313_125856.json
+2025-03-13 13:26:44,168 - INFO - Starting data processing...
+2025-03-13 13:26:44,169 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 13:26:44,647 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 13:26:44,746 - ERROR - Error processing reviews data: 'date'
+2025-03-13 13:26:45,029 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 13:26:45,083 - INFO - Saved merged data to processed_data/merged_data_20250313_132645.json
+2025-03-13 13:28:56,632 - INFO - Starting data processing...
+2025-03-13 13:28:56,634 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 13:28:57,103 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 13:28:57,228 - ERROR - Error processing reviews data: 'date'
+2025-03-13 13:28:57,515 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 13:28:57,570 - INFO - Saved merged data to processed_data/merged_data_20250313_132857.json
+2025-03-13 13:56:45,588 - INFO - Starting data processing...
+2025-03-13 13:56:45,590 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 13:56:46,071 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 13:56:46,185 - ERROR - Error processing reviews data: 'date'
+2025-03-13 13:56:46,496 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 13:56:46,552 - INFO - Saved merged data to processed_data/merged_data_20250313_135646.json
+2025-03-13 13:58:58,008 - INFO - Starting data processing...
+2025-03-13 13:58:58,009 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 13:58:58,489 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 13:58:58,536 - ERROR - Error processing reviews data: 'date'
+2025-03-13 13:58:58,928 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 13:58:58,985 - INFO - Saved merged data to processed_data/merged_data_20250313_135858.json
+2025-03-13 14:26:47,032 - INFO - Starting data processing...
+2025-03-13 14:26:47,033 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 14:26:47,532 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 14:26:47,673 - ERROR - Error processing reviews data: 'date'
+2025-03-13 14:26:47,927 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 14:26:48,001 - INFO - Saved merged data to processed_data/merged_data_20250313_142648.json
+2025-03-13 14:28:59,496 - INFO - Starting data processing...
+2025-03-13 14:28:59,497 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 14:28:59,975 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 14:29:00,096 - ERROR - Error processing reviews data: 'date'
+2025-03-13 14:29:00,385 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 14:29:00,449 - INFO - Saved merged data to processed_data/merged_data_20250313_142900.json
+2025-03-13 14:56:48,584 - INFO - Starting data processing...
+2025-03-13 14:56:48,585 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 14:56:49,078 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 14:56:49,201 - ERROR - Error processing reviews data: 'date'
+2025-03-13 14:56:49,487 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 14:56:49,546 - INFO - Saved merged data to processed_data/merged_data_20250313_145649.json
+2025-03-13 14:59:00,930 - INFO - Starting data processing...
+2025-03-13 14:59:00,931 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 14:59:01,442 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 14:59:01,574 - ERROR - Error processing reviews data: 'date'
+2025-03-13 14:59:01,858 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 14:59:01,916 - INFO - Saved merged data to processed_data/merged_data_20250313_145901.json
+2025-03-13 15:26:50,032 - INFO - Starting data processing...
+2025-03-13 15:26:50,033 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 15:26:50,533 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 15:26:50,581 - ERROR - Error processing reviews data: 'date'
+2025-03-13 15:26:50,961 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 15:26:51,021 - INFO - Saved merged data to processed_data/merged_data_20250313_152651.json
+2025-03-13 15:29:02,439 - INFO - Starting data processing...
+2025-03-13 15:29:02,440 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 15:29:02,953 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 15:29:03,075 - ERROR - Error processing reviews data: 'date'
+2025-03-13 15:29:03,350 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 15:29:03,411 - INFO - Saved merged data to processed_data/merged_data_20250313_152903.json
+2025-03-13 15:56:51,528 - INFO - Starting data processing...
+2025-03-13 15:56:51,529 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 15:56:52,065 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 15:56:52,111 - ERROR - Error processing reviews data: 'date'
+2025-03-13 15:56:52,529 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 15:56:52,591 - INFO - Saved merged data to processed_data/merged_data_20250313_155652.json
+2025-03-13 15:59:03,921 - INFO - Starting data processing...
+2025-03-13 15:59:03,922 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 15:59:04,440 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 15:59:04,489 - ERROR - Error processing reviews data: 'date'
+2025-03-13 15:59:04,892 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 15:59:04,957 - INFO - Saved merged data to processed_data/merged_data_20250313_155904.json
+2025-03-13 16:26:53,135 - INFO - Starting data processing...
+2025-03-13 16:26:53,135 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 16:26:53,696 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 16:26:53,746 - ERROR - Error processing reviews data: 'date'
+2025-03-13 16:26:54,219 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 16:26:54,286 - INFO - Saved merged data to processed_data/merged_data_20250313_162654.json
+2025-03-13 16:29:05,494 - INFO - Starting data processing...
+2025-03-13 16:29:05,495 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 16:29:06,050 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 16:29:06,088 - ERROR - Error processing reviews data: 'date'
+2025-03-13 16:29:06,564 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 16:29:06,626 - INFO - Saved merged data to processed_data/merged_data_20250313_162906.json
+2025-03-13 16:56:54,822 - INFO - Starting data processing...
+2025-03-13 16:56:54,823 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 16:56:55,364 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 16:56:55,408 - ERROR - Error processing reviews data: 'date'
+2025-03-13 16:56:55,875 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 16:56:55,942 - INFO - Saved merged data to processed_data/merged_data_20250313_165655.json
+2025-03-13 16:59:07,140 - INFO - Starting data processing...
+2025-03-13 16:59:07,141 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 16:59:07,704 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 16:59:07,745 - ERROR - Error processing reviews data: 'date'
+2025-03-13 16:59:08,212 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 16:59:08,280 - INFO - Saved merged data to processed_data/merged_data_20250313_165908.json
+2025-03-13 17:26:56,482 - INFO - Starting data processing...
+2025-03-13 17:26:56,483 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 17:26:57,039 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 17:26:57,094 - ERROR - Error processing reviews data: 'date'
+2025-03-13 17:26:57,585 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 17:26:57,656 - INFO - Saved merged data to processed_data/merged_data_20250313_172657.json
+2025-03-13 17:29:08,732 - INFO - Starting data processing...
+2025-03-13 17:29:08,733 - ERROR - Error processing real estate data: 'timestamp'
+2025-03-13 17:29:09,303 - ERROR - Error processing amenities data: 'neighborhood'
+2025-03-13 17:29:09,353 - ERROR - Error processing reviews data: 'date'
+2025-03-13 17:29:09,837 - ERROR - Error processing crime data: unhashable type: 'dict'
+2025-03-13 17:29:09,909 - INFO - Saved merged data to processed_data/merged_data_20250313_172909.json
