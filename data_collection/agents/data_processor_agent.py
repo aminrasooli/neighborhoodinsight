@@ -1,13 +1,17 @@
-from .base_agent import Agent
+from .base_agent import MLEnhancedAgent
 import pandas as pd
 import json
 from datetime import datetime
 import os
 import asyncio
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 import numpy as np
 from ..config import config
 import hashlib
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.cluster import DBSCAN
+import joblib
 
 class DataSchema:
     """Data schema definitions for validation"""
@@ -51,10 +55,16 @@ class DataSchema:
         }
     }
 
-class DataProcessorAgent(Agent):
+class DataProcessorAgent(MLEnhancedAgent):
     def __init__(self, agent_id: str, name: str):
         super().__init__(agent_id, name)
         self.processed_data = {}
+        self.processing_stats = pd.DataFrame()
+        self.scaler = StandardScaler()
+        self.pca = PCA(n_components=0.95)
+        self.cluster_model = DBSCAN(eps=0.5, min_samples=5)
+        self.feature_importance = {}
+        self.model_dir = "models"
         self.output_dir = "processed_data"
         self.version_dir = os.path.join(self.output_dir, "versions")
         os.makedirs(self.output_dir, exist_ok=True)
@@ -62,239 +72,337 @@ class DataProcessorAgent(Agent):
         
     async def initialize(self):
         """Initialize the data processor agent"""
+        await self.load_models()
         self.logger.info(f"Initialized {self.name}")
         
+    async def load_models(self):
+        """Load saved ML models if they exist"""
+        try:
+            scaler_path = os.path.join(self.model_dir, "processor_scaler.joblib")
+            pca_path = os.path.join(self.model_dir, "processor_pca.joblib")
+            cluster_path = os.path.join(self.model_dir, "processor_cluster.joblib")
+            
+            if os.path.exists(scaler_path):
+                self.scaler = joblib.load(scaler_path)
+            if os.path.exists(pca_path):
+                self.pca = joblib.load(pca_path)
+            if os.path.exists(cluster_path):
+                self.cluster_model = joblib.load(cluster_path)
+                
+        except Exception as e:
+            self.logger.error(f"Error loading models: {str(e)}")
+            
+    async def save_models(self):
+        """Save trained ML models"""
+        try:
+            joblib.dump(self.scaler, os.path.join(self.model_dir, "processor_scaler.joblib"))
+            joblib.dump(self.pca, os.path.join(self.model_dir, "processor_pca.joblib"))
+            joblib.dump(self.cluster_model, os.path.join(self.model_dir, "processor_cluster.joblib"))
+        except Exception as e:
+            self.logger.error(f"Error saving models: {str(e)}")
+            
     async def process(self):
-        """Main processing loop for data processing"""
-        # Check for new messages from collector agents
-        message = await self.receive_message()
-        if message and message["content"]["type"] == "new_data":
-            await self.process_new_data(message["content"])
+        """Main processing loop with ML-enhanced data processing"""
+        try:
+            for source_name, data in self.processed_data.items():
+                if data:
+                    start_time = datetime.now()
+                    try:
+                        # Preprocess data
+                        processed_data = await self.preprocess_data(data, source_name)
+                        
+                        # Apply ML transformations
+                        transformed_data = await self.apply_ml_transformations(processed_data)
+                        
+                        # Detect patterns and anomalies
+                        patterns = await self.detect_patterns(transformed_data)
+                        
+                        # Update processed data
+                        self.processed_data[source_name] = {
+                            'data': transformed_data,
+                            'patterns': patterns,
+                            'timestamp': datetime.now()
+                        }
+                        
+                        # Record processing statistics
+                        self.processing_stats = pd.concat([
+                            self.processing_stats,
+                            pd.DataFrame([{
+                                'timestamp': datetime.now(),
+                                'source': source_name,
+                                'success': True,
+                                'processing_time': (datetime.now() - start_time).total_seconds(),
+                                'data_size': len(transformed_data),
+                                'pattern_count': len(patterns)
+                            }])
+                        ])
+                        
+                        # Notify analyzer agent
+                        await self.send_message(
+                            "analyzer_agent",
+                            {
+                                "type": "processed_data",
+                                "source": source_name,
+                                "data": transformed_data,
+                                "patterns": patterns
+                            }
+                        )
+                        
+                        # Learn from success
+                        await self.learn_from_experience(1.0)
+                        
+                    except Exception as e:
+                        self.logger.error(f"Error processing data from {source_name}: {str(e)}")
+                        # Learn from failure
+                        await self.learn_from_experience(0.0)
+                        
+                        # Record failed processing
+                        self.processing_stats = pd.concat([
+                            self.processing_stats,
+                            pd.DataFrame([{
+                                'timestamp': datetime.now(),
+                                'source': source_name,
+                                'success': False,
+                                'processing_time': (datetime.now() - start_time).total_seconds(),
+                                'data_size': 0,
+                                'pattern_count': 0
+                            }])
+                        ])
             
-        # Process existing data periodically
-        await self.process_existing_data()
-        
-        await asyncio.sleep(config.collection.processing_interval)
-        
-    def validate_data(self, data: List[Dict[str, Any]], source: str) -> List[Dict[str, Any]]:
-        """Validate data against schema"""
-        schema = DataSchema.SCHEMAS.get(source)
-        if not schema:
-            self.logger.warning(f"No schema defined for source: {source}")
-            return data
+            # Optimize processing parameters
+            await self.optimize_processing_parameters()
             
-        valid_data = []
-        for item in data:
-            try:
-                # Check required fields
-                if not all(field in item for field in schema["required_fields"]):
+            # Save models periodically
+            await self.save_models()
+            
+        except Exception as e:
+            self.logger.error(f"Error in process loop: {str(e)}")
+            
+    async def preprocess_data(self, data: List[Dict[str, Any]], source: str) -> pd.DataFrame:
+        """Preprocess data with advanced cleaning and validation"""
+        try:
+            df = pd.DataFrame(data)
+            
+            # Handle missing values
+            df = self._handle_missing_values(df)
+            
+            # Remove duplicates
+            df = df.drop_duplicates()
+            
+            # Validate data types
+            df = self._validate_data_types(df, source)
+            
+            # Handle outliers
+            df = self._handle_outliers(df)
+            
+            # Feature engineering
+            df = self._engineer_features(df)
+            
+            return df
+            
+        except Exception as e:
+            self.logger.error(f"Error preprocessing data: {str(e)}")
+            return pd.DataFrame()
+            
+    def _handle_missing_values(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Handle missing values intelligently"""
+        try:
+            # Calculate missing value statistics
+            missing_stats = df.isnull().mean()
+            
+            # For columns with low missing rate (< 5%), use median imputation
+            low_missing_cols = missing_stats[missing_stats < 0.05].index
+            for col in low_missing_cols:
+                df[col] = df[col].fillna(df[col].median())
+                
+            # For columns with high missing rate, create missing indicator
+            high_missing_cols = missing_stats[missing_stats >= 0.05].index
+            for col in high_missing_cols:
+                df[f"{col}_missing"] = df[col].isnull().astype(int)
+                df[col] = df[col].fillna(df[col].median())
+                
+            return df
+            
+        except Exception as e:
+            self.logger.error(f"Error handling missing values: {str(e)}")
+            return df
+            
+    def _validate_data_types(self, df: pd.DataFrame, source: str) -> pd.DataFrame:
+        """Validate and convert data types"""
+        try:
+            schema = DataSchema.SCHEMAS.get(source, {})
+            if not schema or 'types' not in schema:
+                return df
+                
+            for col, dtype in schema['types'].items():
+                if col in df.columns:
+                    try:
+                        if dtype == 'datetime':
+                            df[col] = pd.to_datetime(df[col])
+                        else:
+                            df[col] = df[col].astype(dtype)
+                    except Exception as e:
+                        self.logger.warning(f"Error converting {col} to {dtype}: {str(e)}")
+                        
+            return df
+            
+        except Exception as e:
+            self.logger.error(f"Error validating data types: {str(e)}")
+            return df
+            
+    def _handle_outliers(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Handle outliers using IQR method"""
+        try:
+            numeric_cols = df.select_dtypes(include=[np.number]).columns
+            
+            for col in numeric_cols:
+                Q1 = df[col].quantile(0.25)
+                Q3 = df[col].quantile(0.75)
+                IQR = Q3 - Q1
+                lower_bound = Q1 - 1.5 * IQR
+                upper_bound = Q3 + 1.5 * IQR
+                
+                # Create outlier indicator
+                df[f"{col}_outlier"] = ((df[col] < lower_bound) | (df[col] > upper_bound)).astype(int)
+                
+                # Cap outliers
+                df[col] = df[col].clip(lower_bound, upper_bound)
+                
+            return df
+            
+        except Exception as e:
+            self.logger.error(f"Error handling outliers: {str(e)}")
+            return df
+            
+    def _engineer_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Engineer new features"""
+        try:
+            # Time-based features
+            for col in df.select_dtypes(include=['datetime64']).columns:
+                df[f"{col}_hour"] = df[col].dt.hour
+                df[f"{col}_day"] = df[col].dt.day
+                df[f"{col}_month"] = df[col].dt.month
+                df[f"{col}_dayofweek"] = df[col].dt.dayofweek
+                
+            # Numeric interactions
+            numeric_cols = df.select_dtypes(include=[np.number]).columns
+            for i, col1 in enumerate(numeric_cols):
+                for col2 in numeric_cols[i+1:]:
+                    df[f"{col1}_{col2}_ratio"] = df[col1] / df[col2].replace(0, np.nan)
+                    df[f"{col1}_{col2}_sum"] = df[col1] + df[col2]
+                    df[f"{col1}_{col2}_product"] = df[col1] * df[col2]
+                    
+            return df
+            
+        except Exception as e:
+            self.logger.error(f"Error engineering features: {str(e)}")
+            return df
+            
+    async def apply_ml_transformations(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Apply ML transformations to the data"""
+        try:
+            if len(df) == 0:
+                return df
+                
+            # Select numeric features
+            numeric_cols = df.select_dtypes(include=[np.number]).columns
+            if len(numeric_cols) == 0:
+                return df
+                
+            # Scale features
+            scaled_features = self.scaler.fit_transform(df[numeric_cols])
+            
+            # Apply PCA
+            pca_features = self.pca.fit_transform(scaled_features)
+            
+            # Add PCA components to dataframe
+            for i in range(pca_features.shape[1]):
+                df[f"pca_component_{i+1}"] = pca_features[:, i]
+                
+            # Update feature importance
+            self.feature_importance = dict(zip(numeric_cols, self.pca.explained_variance_ratio_))
+            
+            return df
+            
+        except Exception as e:
+            self.logger.error(f"Error applying ML transformations: {str(e)}")
+            return df
+            
+    async def detect_patterns(self, df: pd.DataFrame) -> List[Dict[str, Any]]:
+        """Detect patterns in the data using clustering"""
+        try:
+            if len(df) < 10:  # Need minimum data points
+                return []
+                
+            # Select features for clustering
+            cluster_features = [col for col in df.columns if col.startswith('pca_component_')]
+            if not cluster_features:
+                return []
+                
+            # Perform clustering
+            clusters = self.cluster_model.fit_predict(df[cluster_features])
+            
+            # Analyze clusters
+            patterns = []
+            for cluster_id in set(clusters):
+                if cluster_id == -1:  # Skip noise points
                     continue
                     
-                # Validate and convert types
-                for field, field_type in schema["types"].items():
-                    if field in item:
-                        if field_type == "datetime":
-                            try:
-                                item[field] = pd.to_datetime(item[field])
-                            except:
-                                continue
-                        else:
-                            try:
-                                item[field] = field_type(item[field])
-                            except:
-                                continue
-                                
-                valid_data.append(item)
+                cluster_data = df[clusters == cluster_id]
+                pattern = {
+                    'cluster_id': int(cluster_id),
+                    'size': len(cluster_data),
+                    'centroid': cluster_data[cluster_features].mean().to_dict(),
+                    'std': cluster_data[cluster_features].std().to_dict(),
+                    'feature_importance': self.feature_importance
+                }
+                patterns.append(pattern)
                 
-            except Exception as e:
-                self.logger.error(f"Error validating data item: {str(e)}")
-                
-        return valid_data
-        
-    def compute_data_hash(self, data: List[Dict[str, Any]]) -> str:
-        """Compute hash of data for versioning"""
-        data_str = json.dumps(data, sort_keys=True, default=str)
-        return hashlib.sha256(data_str.encode()).hexdigest()
-        
-    async def process_new_data(self, data_message: dict):
-        """Process newly received data"""
-        source = data_message["source"]
-        data = data_message["data"]
-        
-        try:
-            # Validate data
-            valid_data = self.validate_data(data, source)
-            if not valid_data:
-                self.logger.warning(f"No valid data found for source: {source}")
-                return
-                
-            # Convert to DataFrame
-            df = pd.DataFrame(valid_data)
-            
-            # Apply processing based on source type
-            if source == "real_estate":
-                df = self.process_real_estate_data(df)
-            elif source == "demographics":
-                df = self.process_demographic_data(df)
-            elif source == "crime":
-                df = self.process_crime_data(df)
-            elif source == "amenities":
-                df = self.process_amenities_data(df)
-            elif source == "reviews":
-                df = self.process_reviews_data(df)
-                
-            # Store processed data
-            self.processed_data[source] = df
-            
-            # Save versioned data
-            data_hash = self.compute_data_hash(valid_data)
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            version_file = f"{self.version_dir}/{source}_{timestamp}_{data_hash[:8]}.json"
-            
-            df.to_json(version_file, orient='records')
-            
-            # Create latest symlink
-            latest_file = f"{self.output_dir}/{source}_latest.json"
-            if os.path.exists(latest_file):
-                os.remove(latest_file)
-            os.symlink(version_file, latest_file)
-            
-            self.logger.info(f"Processed and saved new data from {source}")
+            return patterns
             
         except Exception as e:
-            self.logger.error(f"Error processing new data from {source}: {str(e)}")
+            self.logger.error(f"Error detecting patterns: {str(e)}")
+            return []
             
-    async def process_existing_data(self):
-        """Process and merge all existing data"""
+    async def optimize_processing_parameters(self):
+        """Optimize processing parameters based on performance"""
         try:
-            merged_data = self.merge_all_data()
-            if not merged_data.empty:
-                # Save versioned merged data
-                data_hash = self.compute_data_hash(merged_data.to_dict('records'))
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                version_file = f"{self.version_dir}/merged_{timestamp}_{data_hash[:8]}.json"
-                
-                merged_data.to_json(version_file, orient='records')
-                
-                # Create latest symlink
-                latest_file = f"{self.output_dir}/merged_latest.json"
-                if os.path.exists(latest_file):
-                    os.remove(latest_file)
-                os.symlink(version_file, latest_file)
-                
-                self.logger.info("Processed and saved merged data")
-        except Exception as e:
-            self.logger.error(f"Error processing existing data: {str(e)}")
+            # Calculate current parameters
+            current_params = {
+                'pca_n_components': 0.95,
+                'dbscan_eps': 0.5,
+                'dbscan_min_samples': 5
+            }
             
-    def merge_all_data(self) -> pd.DataFrame:
-        """Merge all processed data sources"""
-        try:
-            if not self.processed_data:
-                return pd.DataFrame()
+            # Analyze performance metrics
+            recent_stats = self.processing_stats.tail(100)
+            if len(recent_stats) > 0:
+                success_rate = recent_stats['success'].mean()
+                avg_processing_time = recent_stats['processing_time'].mean()
+                avg_pattern_count = recent_stats['pattern_count'].mean()
                 
-            # Start with real estate data as base
-            merged = self.processed_data.get("real_estate", pd.DataFrame())
-            if merged.empty:
-                return merged
-                
-            # Merge other data sources based on location
-            for source, df in self.processed_data.items():
-                if source != "real_estate" and not df.empty:
-                    # Implement proper merging logic based on location/neighborhood
-                    pass
+                # Adjust parameters based on performance
+                if success_rate < 0.8:
+                    current_params['pca_n_components'] *= 0.9
+                if avg_processing_time > 10:
+                    current_params['dbscan_min_samples'] = max(3, current_params['dbscan_min_samples'] - 1)
+                if avg_pattern_count < 3:
+                    current_params['dbscan_eps'] *= 1.2
                     
-            return merged
+            # Optimize parameters
+            optimized = await self.optimize_parameters(current_params)
             
+            # Update parameters if optimization successful
+            if optimized:
+                self.pca.n_components = optimized['pca_n_components']
+                self.cluster_model.eps = optimized['dbscan_eps']
+                self.cluster_model.min_samples = optimized['dbscan_min_samples']
+                self.logger.info(f"Updated processing parameters: {optimized}")
+                
         except Exception as e:
-            self.logger.error(f"Error merging data: {str(e)}")
-            return pd.DataFrame()
-            
-    def process_real_estate_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Process real estate data"""
-        try:
-            # Clean price data
-            df['price'] = df['price'].replace('[\$,]', '', regex=True).astype(float)
-            
-            # Convert area to numeric
-            df['sqft'] = df['sqft'].replace('[,]', '', regex=True).astype(float)
-            
-            # Calculate price per square foot
-            df['price_per_sqft'] = df['price'] / df['sqft']
-            
-            return df
-            
-        except Exception as e:
-            self.logger.error(f"Error processing real estate data: {str(e)}")
-            return pd.DataFrame()
-            
-    def process_demographic_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Process demographic data"""
-        try:
-            # Clean numeric columns
-            numeric_cols = ['population', 'median_income', 'median_age']
-            for col in numeric_cols:
-                if col in df.columns:
-                    df[col] = pd.to_numeric(df[col], errors='coerce')
-                    
-            return df
-            
-        except Exception as e:
-            self.logger.error(f"Error processing demographic data: {str(e)}")
-            return pd.DataFrame()
-            
-    def process_crime_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Process crime data"""
-        try:
-            # Convert datetime columns
-            df['incident_datetime'] = pd.to_datetime(df['incident_datetime'])
-            
-            # Group by category and calculate statistics
-            crime_stats = df.groupby('incident_category').agg({
-                'incident_datetime': 'count'
-            }).reset_index()
-            
-            crime_stats.columns = ['category', 'count']
-            
-            return crime_stats
-            
-        except Exception as e:
-            self.logger.error(f"Error processing crime data: {str(e)}")
-            return pd.DataFrame()
-            
-    def process_amenities_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Process amenities data"""
-        try:
-            # Calculate average ratings
-            df['rating'] = pd.to_numeric(df['rating'], errors='coerce')
-            
-            # Group by category
-            amenity_stats = df.groupby('categories').agg({
-                'rating': ['mean', 'count']
-            }).reset_index()
-            
-            amenity_stats.columns = ['category', 'avg_rating', 'count']
-            
-            return amenity_stats
-            
-        except Exception as e:
-            self.logger.error(f"Error processing amenities data: {str(e)}")
-            return pd.DataFrame()
-            
-    def process_reviews_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Process reviews data"""
-        try:
-            # Convert datetime
-            df['time_created'] = pd.to_datetime(df['time_created'])
-            
-            # Calculate sentiment scores (placeholder for now)
-            df['sentiment_score'] = df['rating'] / 5.0
-            
-            return df
-            
-        except Exception as e:
-            self.logger.error(f"Error processing reviews data: {str(e)}")
-            return pd.DataFrame()
+            self.logger.error(f"Error optimizing parameters: {str(e)}")
             
     async def cleanup(self):
         """Cleanup resources"""
+        await self.save_models()
         self.logger.info(f"Cleaned up {self.name}") 

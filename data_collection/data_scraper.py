@@ -8,7 +8,9 @@ from bs4 import BeautifulSoup
 import logging
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np
-from fake_useragent import UserAgent
+from random_user_agent.user_agent import UserAgent
+from random_user_agent.params import SoftwareName, OperatingSystem
+from tqdm import tqdm
 
 # Set up logging
 logging.basicConfig(
@@ -21,7 +23,9 @@ class NeighborhoodDataCollector:
     def __init__(self):
         self.base_path = "collected_data"
         os.makedirs(self.base_path, exist_ok=True)
-        self.ua = UserAgent()
+        software_names = [SoftwareName.CHROME.value]
+        operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]
+        self.ua = UserAgent(software_names=software_names, operating_systems=operating_systems)
         self.session = requests.Session()
 
     def get_headers(self):
