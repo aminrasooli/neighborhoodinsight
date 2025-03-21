@@ -1,69 +1,106 @@
-# Neighborhood Insights API
+# Neighborhood Insight
 
-This is a Flask-based API that provides insights about neighborhoods, including crime data, real estate trends, and resident complaints.
+A sophisticated multi-agent system for collecting, processing, and analyzing neighborhood data using advanced machine learning capabilities.
+
+## Features
+
+- **Data Collection**: Automated data gathering from multiple sources with quality checks and anomaly detection
+- **Data Processing**: Advanced preprocessing, feature engineering, and pattern detection
+- **Data Analysis**: Comprehensive statistical analysis, machine learning models, and interactive visualizations
+- **Multi-Agent Architecture**: Coordinated agents working together to provide insights
+
+## Project Structure
+
+```
+neighborhoodinsight/
+├── data_collection/
+│   ├── agents/
+│   │   ├── data_collector_agent.py
+│   │   ├── data_processor_agent.py
+│   │   ├── data_analyzer_agent.py
+│   │   └── ml_enhanced_agent.py
+│   ├── data_scraper.py
+│   └── requirements.txt
+├── .gitignore
+└── README.md
+```
 
 ## Setup
 
 1. Create a virtual environment:
 ```bash
-python3 -m venv venv
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. Activate the virtual environment:
-- On macOS/Linux:
+2. Install dependencies:
 ```bash
-source venv/bin/activate
-```
-- On Windows:
-```bash
-.\venv\Scripts\activate
+pip install -r data_collection/requirements.txt
 ```
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
+## Usage
+
+1. Start the data collection process:
+```python
+from data_collection.agents.data_collector_agent import DataCollectorAgent
+from data_collection.agents.data_processor_agent import DataProcessorAgent
+from data_collection.agents.data_analyzer_agent import DataAnalyzerAgent
+
+# Initialize agents
+collector = DataCollectorAgent()
+processor = DataProcessorAgent()
+analyzer = DataAnalyzerAgent()
+
+# Start processing
+collector.start()
+processor.start()
+analyzer.start()
 ```
 
-## Running the API
+## Agent Capabilities
 
-1. Start the Flask server:
-```bash
-python app.py
-```
+### DataCollectorAgent
+- Automated data collection from multiple sources
+- Quality metrics calculation
+- Anomaly detection
+- Adaptive collection scheduling
+- Error handling and retry mechanisms
 
-The server will start at `http://127.0.0.1:5000`
+### DataProcessorAgent
+- Advanced data preprocessing
+- Feature engineering
+- Machine learning transformations
+- Pattern detection
+- Data validation and cleaning
 
-## API Endpoints
+### DataAnalyzerAgent
+- Statistical analysis
+- Machine learning model training
+- Interactive visualizations
+- Insight generation
+- Trend analysis
 
-### Health Check
-- **GET** `/health`
-- Returns the API health status
+## Data Flow
 
-### Get Neighborhood Insights
-- **POST** `/get_insights`
-- Request body:
-```json
-{
-    "address": "San Francisco, CA"
-}
-```
-- Returns neighborhood insights including:
-  - Crime analysis
-  - Real estate trends
-  - Resident complaints
+1. **Collection**: DataCollectorAgent gathers data from various sources
+2. **Processing**: DataProcessorAgent cleans and transforms the data
+3. **Analysis**: DataAnalyzerAgent analyzes the processed data and generates insights
 
-## Example Usage
+## Logging
 
-```bash
-curl -X POST http://127.0.0.1:5000/get_insights \
-  -H "Content-Type: application/json" \
-  -d '{"address": "San Francisco, CA"}'
-```
+The system maintains detailed logs for each agent:
+- `data_collection.log`: Collection process logs
+- `data_processing.log`: Processing operation logs
+- `data_analysis.log`: Analysis and insight generation logs
 
-## Note
-This is a demo implementation with mock data. In a production environment, you would need to:
-1. Replace mock data with real API integrations
-2. Add proper error handling and validation
-3. Implement security measures
-4. Add rate limiting
-5. Set up proper logging 
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
