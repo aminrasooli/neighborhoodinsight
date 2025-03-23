@@ -1,64 +1,64 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-import pandas as pd
-from data_collection import fetch_crime_data, fetch_real_estate_data, fetch_resident_complaints
+from flask import Flask, render_template, jsonify, request
+from data_collection.agents.data_collector_agent import DataCollectorAgent
+from data_collection.agents.data_processor_agent import DataProcessorAgent
+from data_collection.agents.data_analyzer_agent import DataAnalyzerAgent
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
 
-@app.route("/", methods=["GET"])
-def root():
-    return jsonify({"message": "Welcome to Neighborhood Insights API"}), 200
+# Initialize agents
+collector = DataCollectorAgent()
+processor = DataProcessorAgent()
+analyzer = DataAnalyzerAgent()
 
-@app.route("/health", methods=["GET"])
-def health_check():
-    return jsonify({"status": "healthy"}), 200
+@app.route('/')
+def index():
+    """Render the main dashboard page."""
+    return render_template('index.html')
 
-@app.route("/get_insights", methods=["POST"])
+@app.route('/api/status')
+def get_status():
+    """Get the current status of all agents."""
+    return jsonify({
+        'collector': collector.get_status(),
+        'processor': processor.get_status(),
+        'analyzer': analyzer.get_status()
+    })
+
+@app.route('/api/insights')
 def get_insights():
-    try:
-        data = request.json
-        if not data:
-            return jsonify({"error": "No JSON data provided"}), 400
-            
-        address = data.get("address")
-        if not address:
-            return jsonify({"error": "Address is required"}), 400
-        
-        # Extract city from address (simple implementation)
-        city = address.split(",")[0].strip()
-        
-        # Fetch all data
-        crime_data = fetch_crime_data(city)
-        real_estate_trends = fetch_real_estate_data()
-        complaints = fetch_resident_complaints()
-        
-        # Process and analyze the data
-        insights = {
-            "crime_analysis": {
-                "recent_incidents": crime_data.to_dict("records"),
-                "risk_level": "Medium",
-                "trend": "Decreasing"
-            },
-            "real_estate_trends": real_estate_trends,
-            "resident_complaints": {
-                "top_complaints": complaints,
-                "total_complaints": len(complaints)
-            }
-        }
-        
-        return jsonify(insights)
-    
-    except Exception as e:
-        print(f"Error processing request: {str(e)}")
-        return jsonify({"error": "Internal server error"}), 500
+    """Get neighborhood insights."""
+    neighborhood = request.args.get('neighborhood', 'default')
+    timeframe = request.args.get('timeframe', '1y')
+    return jsonify(analyzer.get_insights(neighborhood, timeframe))
 
-if __name__ == "__main__":
-    try:
-        print("Starting Neighborhood Insights API...")
-        print("Server will be available at http://localhost:3000")
-        # Use 0.0.0.0 to bind to all interfaces
-        app.run(host="0.0.0.0", port=3000)
-    except Exception as e:
-        print(f"Failed to start server: {str(e)}")
-        exit(1) 
+@app.route('/api/metrics/quality')
+def get_quality_metrics():
+    """Get data quality metrics."""
+    source = request.args.get('source', 'all')
+    return jsonify(collector.get_quality_metrics(source))
+
+@app.route('/api/collect', methods=['POST'])
+def trigger_collection():
+    """Trigger manual data collection."""
+    data = request.get_json()
+    sources = data.get('sources', ['all'])
+    return jsonify(collector.trigger_collection(sources))
+
+@app.route('/api/visualizations')
+def get_visualizations():
+    """Get available visualizations."""
+    return jsonify(analyzer.get_visualizations())
+
+if __name__ == '__main__':
+    # Start the agents
+    collector.start()
+    processor.start()
+    analyzer.start()
+    
+    # Run the Flask app
+    app.run(host='0.0.0.0', port=3000, debug=True) 
